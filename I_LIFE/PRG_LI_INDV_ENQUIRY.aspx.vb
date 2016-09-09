@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.Data
+Imports CustodianLife.Data
 Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
     Inherits System.Web.UI.Page
     Protected FirstMsg As String
@@ -47,11 +48,7 @@ Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
         End If
     End Sub
     Protected Sub cmdSearch_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
-        'If LTrim(RTrim(Me.txtSearch.Value)) = "Search..." Then
-        '     ElseIf LTrim(RTrim(Me.txtSearch.Value)) <> "" Then
-        'ElseIf LTrim(RTrim(Me.txtSearch.Value)) <> "" Then
-        '    Call gnProc_Populate_Box("IL_ASSURED_HELP_SP", "001", Me.cboSearch, RTrim(Me.txtSearch.Value), )
-        'End If
+
         lblMsg.Text = ""
         cboSearch.Items.Clear()
         Dim MyBirthDate As String
@@ -234,12 +231,13 @@ Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
                     End If
                 End If
 
+
                 Dim coverperiod As String
                 Dim CoverPeriodArray(2) As String
-                'Me.txtCoverPeriod.Text = RTrim(CType(objOLEDR("ReceiptCoverPeriod") & vbNullString, String))
-                coverperiod = RTrim(CType(objOLEDR("ReceiptCoverPeriod") & vbNullString, String))
+                'ignore what had been in the DB and recalculate the periods
+                GetReceiptCoverPeriod(txtQuote_Num.Text.Trim(), txtMop.Text.Trim(), txtCommenceDate.Text.Trim(), txtPremAmt.Text.Trim)
+                coverperiod = txtCoverPeriod.Text ' RTrim(CType(objOLEDR("ReceiptCoverPeriod") & vbNullString, String))
 
-                '  CoverPeriodArray = coverperiod.Split("To")
 
                 Dim CoverFrom As String
                 Dim CoverTo As String
@@ -247,11 +245,11 @@ Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
                 CoverFrom = Left(Trim(coverperiod), 10)
                 CoverTo = Right(Trim(coverperiod), 10)
 
-                If Trim(CoverFrom) <> Trim(CoverTo) Then
-                    Me.txtCoverPeriod.Text = RTrim(CType(objOLEDR("ReceiptCoverPeriod") & vbNullString, String))
-                Else
-                    Me.txtCoverPeriod.Text = RTrim(CType(objOLEDR("ReceiptCoverPeriodByProplNo") & vbNullString, String))
-                End If
+                'If Trim(CoverFrom) <> Trim(CoverTo) Then
+                '    Me.txtCoverPeriod.Text = RTrim(CType(objOLEDR("ReceiptCoverPeriod") & vbNullString, String))
+                'Else
+                '    Me.txtCoverPeriod.Text = RTrim(CType(objOLEDR("ReceiptCoverPeriodByProplNo") & vbNullString, String))
+                'End If
                 'For Renewal date
                 CoverFrom = Left(Trim(Me.txtCoverPeriod.Text), 10)
                 CoverTo = Right(Trim(Me.txtCoverPeriod.Text), 10)
@@ -340,7 +338,7 @@ Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
 
     End Function
 
-    Private Sub GetReceiptCoverPeriod(ByVal PolicyNo, ByVal Mop, ByVal EffDate, ByVal MopContrib)
+    Private Sub GetReceiptCoverPeriod(ByVal PolicyNo As String, ByVal Mop As String, ByVal EffDate As String, ByVal MopContrib As String)
         Dim contibution As Double
         Dim mystrCONN As String = CType(Session("connstr"), String)
         Dim objOLEConn As New OleDbConnection(mystrCONN)
@@ -356,26 +354,11 @@ Partial Class I_LIFE_PRG_LI_INDV_ENQUIRY
         If MopContrib <> "" Or MopContrib <> Nothing Then
             contibution = CDbl(MopContrib)
         End If
-        'strTable = strTableName
-        'strSQL = ""
-        'strSQL = strSQL & "SELECT *"
-        'strSQL = strSQL & " FROM CiFn_ReceiptCoverPeriods('" + PolicyNo + "', '" + Mop + "', "
-        'strSQL = strSQL & "  '" & 0 & "'," + contibution + ", " + 0 + ", NULL, NULL,NULL)"
         Dim _amtpaid = 0
 
-        'strSQL = "SELECT * " _
-        '                  + "FROM CiFn_ReceiptCoverPeriods('" _
-        '                  + PolicyNo + "','" _
-        '                  + Mop + "', '" _
-        '                  + EffDate + "', " _
-        '                  + MopContrib + "," _
-        '                  + _amtpaid + ",NULL,NULL,NULL)"
-
-        strSQL = "SELECT * FROM CiFn_ReceiptCoverPeriods('" + PolicyNo + "','" + Mop + "', '" + EffDate + "', " _
-                          + MopContrib + "," _
-                          + _amtpaid + ",NULL,NULL,NULL)"
-
-
+        Dim transdate As String = hashHelper.removeDateSeperators(EffDate)
+        strSQL = "SELECT * FROM [dbo].[CiFn_ReceiptCoverPeriods]('" & PolicyNo + "','" & Mop & "','" & transdate & "','" & contibution & "','" & _amtpaid & "'," & _
+                "NULL,NULL,NULL)"
         Try
             Dim objOLECmd As OleDbCommand = New OleDbCommand(strSQL, objOLEConn)
 

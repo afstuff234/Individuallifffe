@@ -102,7 +102,8 @@ Partial Class I_LIFE_PRG_LI_PROP_POLICY
                 AddMenuItem("", "Change Proposal", "PRG_LI_INDV_POLY_PERSNAL.aspx?optid=CHG")
                 'AddMenuItem("", "Delete Proposal", "PRG_LI_INDV_POLY_PERSNAL.aspx?optid=DEL")
                 AddMenuItem("", "Delete Proposal", "")
-                'AddMenuItem("", "UNDER_LINE", "") 'blank link
+                AddMenuItem("", "", "") 'blank link
+                AddMenuItem("", "Renewal Premium Receipts Entry", "PRG_LI_POL_RENEWAL_RECEIPT.aspx")
                 AddMenuItem("", "", "") 'blank link
                 AddMenuItem("", "Convert Proposal to Policy", "PRG_LI_INDV_POLY_CONVERT.aspx")
                 'AddMenuItem("", "", "") 'blank link

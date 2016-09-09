@@ -2271,15 +2271,15 @@ Skip_C001:
 
     Protected Sub cmdNext_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdNext.Click
         Dim pvURL As String = ""
-        pvURL = "prg_li_indv_poly_benefry.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
-        Select Case Trim(Me.txtProduct_Num.Text)
-            Case "F001", "F002"
-                pvURL = "prg_li_indv_poly_funeral.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
-        End Select
+        'pvURL = "PRG_LI_POLICY_RECEIPT.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
+        pvURL = "PRG_LI_POL_RECEIPT_MULTIPLE.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
         pvURL = pvURL & "&optpolid=" & Trim(Me.txtPolNum.Text)
         pvURL = pvURL & "&optquotid=" & Trim(Me.txtQuote_Num.Text)
         Response.Redirect(pvURL)
 
     End Sub
 
+    Protected Sub cboPrem_SA_Currency_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cboPrem_SA_Currency.SelectedIndexChanged
+
+    End Sub
 End Class

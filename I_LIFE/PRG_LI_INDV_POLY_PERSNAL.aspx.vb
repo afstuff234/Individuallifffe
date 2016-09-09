@@ -2603,4 +2603,7 @@ PUpdate_Date1:
 
 
 
+    Protected Sub DoProc_Dept_Refresh(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdDept_Refresh.Click
+
+    End Sub
 End Class

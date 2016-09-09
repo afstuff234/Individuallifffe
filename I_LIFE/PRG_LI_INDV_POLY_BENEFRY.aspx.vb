@@ -63,29 +63,6 @@ Partial Class I_LIFE_PRG_LI_INDV_POLY_BENEFRY
             strP_ID = ""
         End Try
 
-        'Try
-        '    'strF_ID = CType(Request.QueryString("optfileid"), String)
-        '    strF_ID = CType("1110356", String)
-        'Catch ex As Exception
-        '    strF_ID = ""
-        'End Try
-
-        'Try
-        '    'strQ_ID = CType(Request.QueryString("optquotid"), String)
-        '    strQ_ID = CType("P/2/IP/000121", String)
-        'Catch ex As Exception
-        '    strQ_ID = ""
-        'End Try
-
-        'Try
-        '    'strP_ID = CType(Request.QueryString("optpolid"), String)
-        '    strP_ID = CType("PI/2015/1501/I/I005/I/0000013", String)
-        'Catch ex As Exception
-        '    strP_ID = ""
-        'End Try
-
-
-
         If Not (Page.IsPostBack) Then
             Call Proc_DoNew()
 
@@ -1210,7 +1187,7 @@ Proc_Skip_ANB:
 
     Protected Sub cmdPrev_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdPrev.Click
         Dim pvURL As String = ""
-        pvURL = "prg_li_indv_poly_prem.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
+        pvURL = "PRG_LI_POL_RECEIPT_MULTIPLE.aspx?optfileid=" & Trim(Me.txtFileNum.Text)
         Select Case Trim(Me.txtProduct_Num.Text)
             Case "F001", "F002"
                 pvURL = "prg_li_indv_poly_funeral.aspx?optfileid=" & Trim(Me.txtFileNum.Text)

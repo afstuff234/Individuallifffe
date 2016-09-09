@@ -523,45 +523,48 @@ Partial Class I_LIFE_MENU_IL
                 AddMenuItem("", "Returns to Previous Page", "menu_il.aspx?menu=home")
 
             Case "IL_CLAIM"
-                'Me.LNK_CLP.BackColor = Drawing.Color.Teal
-                'Me.LNK_CLP.Font.Bold = True
                 STRMENU_TITLE = "+++ Claims Menu +++ "
                 AddMenuItem("", "Returns to Previous Page", "menu_il.aspx?menu=home")
                 AddMenuItem("", "UNDER_LINE", "") 'blank link
-                'AddMenuItem("", "", "") 'blank link
-                'AddMenuItem("", "MENU CAPTION", "PAGE URL")
-                'AddMenuItem("Transactions", "New Claims Notification/Registration Entry", "")
-                'AddMenuItem("", "Claims Settlement", "")
-                'AddMenuItem("", "", "") 'blank link
-                'AddMenuItem("Operations", "Policy Maturity Process", "")
                 AddMenuItem("", "", "") 'blank link
                 AddMenuItem("Entries", "Claim Request Entry", "PRG_LI_REQ_ENTRY.aspx?optid=NEW")
-                AddMenuItem("", "Waiver of Premium", "PRG_LI_CLM_WAIVER.aspx?optid=NEW")
-                AddMenuItem("", "Paid-Up Policies", "PRG_PAIDUP_PROCESS.aspx?optid=NEW")
-                AddMenuItem("", "Lapse Policies", "PRG_LI_LAPSE_PROCESS.aspx?optid=NEW")
-                AddMenuItem("", "Policy Cancellation Process", "PRG_LI_CANCEL_PROCESS.aspx?optid=NEW")
-                AddMenuItem("", "Policy Reactivation Process", "PRG_LI_REVIVE_POLICY.aspx?optid=NEW")
-                AddMenuItem("", "Maturity Claim Process", "PRG_LI_CLM_MATURE.aspx?optid=NEW")
-                AddMenuItem("", "Partial Maturity Claim Process", "PRG_LI_CLM_PART_MATURE.aspx?optid=NEW")
-
                 AddMenuItem("", "", "") 'blank link
-                AddMenuItem("Reports", "List of Surrendered Policies", "")
-                AddMenuItem("", "List of Paid-Up Policies", "")
-                AddMenuItem("", "List of Policies Maturiting", "")
-                AddMenuItem("", "List of Lapsed Policies", "")
-                AddMenuItem("", "List of Cancelled Policies", "")
-                AddMenuItem("", "", "") 'blank link
-                AddMenuItem("Maturity/Withdrawal", "Maturity Report", "")
-                AddMenuItem("", "Partial Maturity Report", "")
-                AddMenuItem("", "Partial Withdrwal Report", "")
-                AddMenuItem("", "Full Withdrawal Report", "")
-                AddMenuItem("", "", "") 'blank link
-                AddMenuItem("", "NAICOM Outstanding Report", "")
-                'AddMenuItem("", "Death Claims Report", "")
+                'AddMenuItem("Reports", "List of Surrendered Policies", "")
+                'AddMenuItem("", "List of Paid-Up Policies", "")
+                'AddMenuItem("", "List of Policies Maturiting", "")
+                'AddMenuItem("", "List of Lapsed Policies", "")
+                'AddMenuItem("", "List of Cancelled Policies", "")
+                'AddMenuItem("", "", "") 'blank link
+                'AddMenuItem("Maturity/Withdrawal", "Maturity Report", "")
+                'AddMenuItem("", "Partial Maturity Report", "")
+                'AddMenuItem("", "Partial Withdrwal Report", "")
+                'AddMenuItem("", "Full Withdrawal Report", "")
+                'AddMenuItem("", "", "") 'blank link
+                'AddMenuItem("", "NAICOM Outstanding Report", "")
+                ''AddMenuItem("", "Death Claims Report", "")
                 AddMenuItem("", "", "") 'blank link
                 AddMenuItem("", "UNDER_LINE", "") 'blank link
                 AddMenuItem("", "Returns to Previous Page", "menu_il.aspx?menu=home")
 
+            Case "IL_POL_SERVICING"
+                STRMENU_TITLE = "+++ Policy Servicing Menu +++ "
+                AddMenuItem("", "Returns to Previous Page", "menu_il.aspx?menu=home")
+                AddMenuItem("", "UNDER_LINE", "") 'blank link
+
+            Case "IL_POL_STATUS_CHANGES"
+                STRMENU_TITLE = "+++ Policy Status Changes Menu +++ "
+                AddMenuItem("", "Returns to Previous Page", "menu_il.aspx?menu=home")
+                AddMenuItem("", "UNDER_LINE", "") 'blank link
+                AddMenuItem("", "", "") 'blank link
+                AddMenuItem("", "Waiver of Premium", "PRG_LI_CLM_WAIVER.aspx?optid=NEW")
+                AddMenuItem("", "Paid-Up Cancellation", "PRG_PAIDUP_PROCESS.aspx?optid=NEW")
+                AddMenuItem("", "Lapse Cancellation", "PRG_LI_LAPSE_PROCESS.aspx?optid=NEW")
+                AddMenuItem("", "Policy Termination ", "PRG_LI_CANCEL_PROCESS.aspx?optid=NEW")
+                AddMenuItem("", "Lapse/Paidup Reinstatement", "PRG_LI_REVIVE_POLICY.aspx?optid=NEW")
+                AddMenuItem("", "Maturity Claim", "PRG_LI_CLM_MATURE.aspx?optid=NEW")
+                AddMenuItem("", "Partial Maturity Claim Process", "PRG_LI_CLM_PART_MATURE.aspx?optid=NEW")
+
+                AddMenuItem("", "", "") 'blank link
             Case "IL_REINS"
                 'Me.LNK_REINS.BackColor = Drawing.Color.Teal
                 'Me.LNK_REINS.Font.Bold = True
