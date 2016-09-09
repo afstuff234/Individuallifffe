@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ABS_LIFE", "..\ABS_LIFE\", "{FD0E686F-E860-480C-9EDB-39966966CD10}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{86F30336-CC08-48CC-8D7B-4C58EF63DB46}|CustodianLife.Data.dll;{618316BC-A692-4367-BF45-D563AA8346C4}|CustodianLife.Model.dll;{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}|CustodianLife.Repositories.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/ABS_LIFE"
+		Debug.AspNetCompiler.PhysicalPath = "..\ABS_LIFE\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ABS_LIFE\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ABS_LIFE"
+		Release.AspNetCompiler.PhysicalPath = "..\ABS_LIFE\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ABS_LIFE\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "30360"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustodianLife.Repositories", "..\..\CustodianLifeAccounts\CustodianLife.Repositories\CustodianLife.Repositories\CustodianLife.Repositories.csproj", "{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustodianLife.Model", "..\..\CustodianLifeAccounts\CustodianLife.Model\CustodianLife.Model\CustodianLife.Model.csproj", "{618316BC-A692-4367-BF45-D563AA8346C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustodianLife.Data", "..\..\CustodianLifeAccounts\CustodianLife.Data\CustodianLife.Data\CustodianLife.Data.csproj", "{86F30336-CC08-48CC-8D7B-4C58EF63DB46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Debug|.NET.ActiveCfg = Debug|.NET
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Debug|.NET.Build.0 = Debug|.NET
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Release|.NET.Build.0 = Debug|Any CPU
+		{FD0E686F-E860-480C-9EDB-39966966CD10}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Release|.NET.ActiveCfg = Release|Any CPU
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C8AAA7-FF5C-4F85-B416-2A30973B4B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Release|.NET.ActiveCfg = Release|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618316BC-A692-4367-BF45-D563AA8346C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Release|.NET.ActiveCfg = Release|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F30336-CC08-48CC-8D7B-4C58EF63DB46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

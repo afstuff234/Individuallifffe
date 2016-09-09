@@ -1,0 +1,96 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage2.master.vb" Inherits="MasterPage2" %>
+
+<%@ Register src="UC_BANM.ascx" tagname="UC_BANM" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .div_01
+        {
+        	border: 1px solid #c0c0c0;
+        	width: 90%;
+        }
+        .div_02
+        {
+        	border: 1px solid #0c0c0c;
+        	width: 90%;
+        }
+
+        .style1
+        {
+        	width: 100%;
+        }
+        .style2
+        {
+        	background-color: White;
+        	border: 1px solid #c0c0c0;
+           	text-align: left;
+        	vertical-align: top;
+            width: 200px;
+        }
+        .style3
+        {
+        	background-color: White;
+           	text-align: left;
+        	height: 600px;
+        	vertical-align: top;        	
+            width: 700px;
+        }
+
+        .style4
+        {
+  	        width: 100%;
+  	        }
+
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    
+    <div align="center" class="div_01">
+        <h2>ASP.NET Master Page Demonstration</h2>
+    </div>
+    
+    <div align="center" class="div_02">       
+        <table align="center" border="0" class="style1">
+            <tr>
+                <td colspan="2">
+                     <uc1:UC_BANM ID="UC_BAN1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <a id="A1" href="#" runat="server">Menu-1</a><br />
+                    <a id="A2" href="#" runat="server">Menu-2</a><br />
+                    <a id="A3" href="#" runat="server">Menu-3</a><br />
+                    <a id="A4" href="#" runat="server">Menu-4</a><br />
+                    <a id="A5" href="#" runat="server">Menu-5</a><br />
+                 </td>
+                 
+                <td class="style3">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>        
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="style4">
+                   <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">      
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

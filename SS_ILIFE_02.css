@@ -1,0 +1,24 @@
+﻿
+         body {color: #000; background-color: #fff; font-family: Tahoma,Arial,sans-serif; font-size:medium; }
+        .mydiv { background-color: White; border: 0px solid #c0c0c0; margin: 1px auto; width: 1000px;}
+        
+        table.tablemax { max-width:1000px; width: 1000px; border: 1px solid #c0c0c0;}
+        table.tablemax2 {max-width:1000px; width: 1000px;}
+        table.footer {max-width:1000px; width: 1000px; border: 1px solid #c0c0c0;}
+
+        ul { margin-left: 15px; padding-left: 0px; list-style-image: url(arrowlist.gif); }
+        li { line-height: 16px;}
+
+        h1 { font-weight: bold; font-size: 100%; color: #000; padding-bottom: 0px; margin-bottom: 0px; padding-top: 0px; }
+        h2 { font-weight: bold; font-size: 120%; color: #000; padding-bottom: 1px; margin-bottom: 0px; padding-top: 1px; }
+        h3 { font-weight: bold; font-size: 110%; color: #000; }
+        h4 { font-weight: normal; font-style: italic; font-size: 100%; color: #000; }
+
+        A { text-decoration: none;}
+        A:visited { color: #0000ff;}
+        A:hover { color: #1E9000; text-decoration: underline;}
+        A:active { color: #1E9000;}
+        A:visited.toptext { color: #444;}
+        A:hover.toptext { color: #1E9000; text-decoration: underline;}
+        A:active.toptext { color: #1E9000;}
+        

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Ajax at work</title>
+<script language = "javascript" type="text/javascript">
+
+var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest) {
+	XMLHttpRequestObject = new XMLHttpRequest();
+}
+else if (window.ActiveXObject) {
+	XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+function getData(dataSource, divID)
+{
+
+	if(XMLHttpRequestObject) {
+		var obj = document.getElementById(divID);
+		//obj.innerHTML = "Hello. Ajax Text...";
+		XMLHttpRequestObject.open("GET", dataSource);
+
+		XMLHttpRequestObject.onreadystatechange = function()
+		{
+			if (XMLHttpRequestObject.readyState == 4 &&
+				XMLHttpRequestObject.status == 200) {
+				obj.innerHTML = XMLHttpRequestObject.responseText;
+			}
+
+		}
+
+		XMLHttpRequestObject.send(null);
+	}
+}
+
+</script>
+
+</head>
+<body>
+<h1>Fetching data with Ajax</h1>
+<form>
+
+<input type = "button" value = "Display Message"
+onclick = "getData('http://localhost:49455/ajaxdata.txt','targetDiv')" />
+
+</form>
+
+<div id="targetDiv">
+<p>The fetched data will go here.</p>
+</div>
+
+<!-- 
+	The other file is data.txt, and here’s all the text it contains:
+	This text was fetched using Ajax.
+-->
+
+</body>
+</html>

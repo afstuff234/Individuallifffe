@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix2">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.47917in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>NAME OF BENEFICIARY</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>RELATIONSHIP</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>%SHARE</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="TBIL_ANN_BENF_NAME">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!TBIL_ANN_BENF_NAME.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>TBIL_ANN_BENF_NAME</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="TBIL_ANN_BENF_RELATN_CD1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!TBIL_ANN_BENF_RELATN_CD.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>TBIL_ANN_BENF_RELATN_CD1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="TBIL_ANN_BENF_PCENT1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!TBIL_ANN_BENF_PCENT.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>TBIL_ANN_BENF_PCENT1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details1" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>AnnuityBeneficiaryDs</DataSetName>
+        <Height>0.5in</Height>
+        <Width>3.47917in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>0.5in</Height>
+    <Style />
+  </Body>
+  <Width>3.47917in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="ABSLIFE">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=ABS-SERVER;Initial Catalog=ABS_LIFE_STAGING</ConnectString>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>accb5acc-3619-4222-8932-092eea57cb53</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="AnnuityBeneficiaryDs">
+      <Query>
+        <DataSourceName>ABSLIFE</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@pPOLY_NO">
+            <Value>=Parameters!pPOLY_NO.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT        TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_REC_ID, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_FILE_NO, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_MDLE, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_PROP_NO, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_BENF_COVER_ID, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_POLY_NO, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_SNO, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_COVER_ID, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_TYPE, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_CAT, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_BDATE, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_AGE, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_RELATN_CD, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_NAME, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_PCENT, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_GURDN_NM, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_ADRESS, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_TAG, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_FLAG, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_OPERID, TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_KEYDTE, 
+                         TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_OLD_NEW
+FROM            TBIL_ANN_POLICY_PREM_INFO INNER JOIN
+                         TBIL_ANN_POLICY_BENEFRY ON TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_POLY_NO = TBIL_ANN_POLICY_PREM_INFO.TBIL_ANN_POL_PRM_POLY_NO
+WHERE        (TBIL_ANN_POLICY_BENEFRY.TBIL_ANN_BENF_POLY_NO = @pPOLY_NO)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TBIL_ANN_BENF_REC_ID">
+          <DataField>TBIL_ANN_BENF_REC_ID</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_FILE_NO">
+          <DataField>TBIL_ANN_BENF_FILE_NO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_MDLE">
+          <DataField>TBIL_ANN_BENF_MDLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_PROP_NO">
+          <DataField>TBIL_ANN_BENF_PROP_NO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_BENF_COVER_ID">
+          <DataField>TBIL_ANN_BENF_BENF_COVER_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_POLY_NO">
+          <DataField>TBIL_ANN_BENF_POLY_NO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_SNO">
+          <DataField>TBIL_ANN_BENF_SNO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_COVER_ID">
+          <DataField>TBIL_ANN_BENF_COVER_ID</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_TYPE">
+          <DataField>TBIL_ANN_BENF_TYPE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_CAT">
+          <DataField>TBIL_ANN_BENF_CAT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_BDATE">
+          <DataField>TBIL_ANN_BENF_BDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_AGE">
+          <DataField>TBIL_ANN_BENF_AGE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_RELATN_CD">
+          <DataField>TBIL_ANN_BENF_RELATN_CD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_NAME">
+          <DataField>TBIL_ANN_BENF_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_PCENT">
+          <DataField>TBIL_ANN_BENF_PCENT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_GURDN_NM">
+          <DataField>TBIL_ANN_BENF_GURDN_NM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_ADRESS">
+          <DataField>TBIL_ANN_BENF_ADRESS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_TAG">
+          <DataField>TBIL_ANN_BENF_TAG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_FLAG">
+          <DataField>TBIL_ANN_BENF_FLAG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_OPERID">
+          <DataField>TBIL_ANN_BENF_OPERID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_KEYDTE">
+          <DataField>TBIL_ANN_BENF_KEYDTE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TBIL_ANN_BENF_OLD_NEW">
+          <DataField>TBIL_ANN_BENF_OLD_NEW</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="pPOLY_NO">
+      <DataType>String</DataType>
+      <Prompt>p POLY NO</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>6cf890b2-f8c0-468f-b785-c136e6d0c1b6</rd:ReportID>
+</Report>

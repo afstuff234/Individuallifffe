@@ -1,0 +1,1 @@
+﻿Data Source=192.168.10.73;Initial Catalog=ABS_LIFE_07032016;User ID=CustodianUser;Password=Custodian@123;
