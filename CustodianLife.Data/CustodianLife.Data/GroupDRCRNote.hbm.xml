@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianLife.Model" namespace="CustodianLife.Model">
+  <class name="GroupDRCRNote" table="TBIL_GRP_POLICY_DNOTE_DETAILS">
+    <id name="gdnId" column="TBIL_POL_PRM_DCN_REC_ID">
+      <generator class="identity"  />
+    </id>
+    <property name="SystemModule" column="TBIL_POL_PRM_DCN_MDLE" length="3" />
+    <property name="FileNo" column="TBIL_POL_PRM_DCN_FILE_NO" length="40" />
+    <property name="ProposalNo" column="TBIL_POL_PRM_DCN_PROP_NO" length="40" />
+    <property name="PolicyNo" column="TBIL_POL_PRM_DCN_POLY_NO" length="40" />
+    <property name="ProductCode" column="TBIL_POL_PRM_DCN_PRDCT_CD" length="10" />
+    <property name="MembBatchNo" column="TBIL_POL_PRM_DCN_MEMB_BATCH_NO" length="10" />
+    <property name="ProcessingDate" column="TBIL_POL_PRM_DCN_DCN_PROC_DATE" length="10" />
+    <property name="BatchNo" column="TBIL_POL_PRM_DCN_BATCH_NO" type="int" />
+    <property name="DrCrNo" column="TBIL_POL_PRM_DCN_TRANS_NO" length="15" />
+    <property name="DrCrNoteDesc" column="TBIL_POL_PRM_DCN_DESC" length="100" />
+    <property name="DrCr" column="TBIL_POL_PRM_DCN_DB_CR_CD" length="100" />
+    <property name="BrokerCode" column="TBIL_POL_PRM_DCN_BRK_CODE" length="100" />
+
+    <!--
+    <one-to-one  name="LoanInterest" class="CustodianLife.Model.LoanInterest, CustodianLife.Model" />
+    -->
+  </class>
+</hibernate-mapping>

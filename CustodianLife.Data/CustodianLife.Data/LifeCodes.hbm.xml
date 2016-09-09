@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianLife.Model" namespace="CustodianLife.Model">
+  <class name="LifeCodes" table="TBIL_LIFE_CODES">
+    <id name="lcId" column="TBIL_COD_REC_ID">
+      <generator class="identity"  />
+    </id>
+    <property name="CodeTabId" column="TBIL_COD_TAB_ID" length="4" />
+    <property name="CodeType" column="TBIL_COD_TYP" length="4" />
+    <property name="CodeItem" column="TBIL_COD_ITEM" length="30" />
+    <property name="CodeLongDesc" column="TBIL_COD_LONG_DESC" length="200" />
+    <property name="CodeShortDesc" column="TBIL_COD_SHORT_DESC" length="20" />
+    <property name="CodeCatTag" column="TBIL_COD_CAT_TAG" length="10" />
+    <property name="Flag" column="TBIL_COD_FLAG" length="1" />
+    <property name="OperId" column="TBIL_COD_OPERID" length="10" />
+    <property name="EntryDate" column="TBIL_COD_KEYDTE" type="datetime"  />
+    <property name="Status" column="TBIL_COD_NEW_OLD" length="3" />
+
+  </class>
+</hibernate-mapping>
